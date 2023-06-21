@@ -79,7 +79,7 @@ li.dropdown {
              할아버지는 <ul>이고 position: sticky;로 설정함.
              따라서 <ul>요소를 기준으로 출력 위치가 결정됨       
   */
-  background-color: #f1f1f1;
+  background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             /* 요소에 테두리(border)를 그리는 대신에 
@@ -112,7 +112,7 @@ li.dropdown {
   text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #ffb71c;}
+.dropdown-content a:hover {background-color: #ebc839;}
 
 .dropdown:hover .dropdown-content {
   display: block; /* 마우스 오버시 드롭다운 메뉴가 보이도록 설정 */

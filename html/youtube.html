@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../css/mystyle.css">
 
   <style>
-    * {
+        * {
       font-family: 'GmarketSans';
     }
     .menu-wrapper {
@@ -18,10 +18,19 @@
   float: left;
   padding: 20px;
   box-sizing:border-box; 
+         /* 박스모델에서 박스의 크기는 기본적으로 콘텐츠의 크기만 계산(box-sizing:content-box;)
+         아래에서 넓이를 70%로 지정했는데 패딩의 크기가 20px이 있어 실제 크기는 70%를 초과하게 됨
+         box-sizing을 border-box 로 지정하면 **박스 크기 = 콘텐츠 크기+padding크기+border크기의 합**
+         패딩의 크기를 포함한 article 영역의 전체 넓이를 70%로 맞추기 위해 border-box로 지정함 */
   width: 100%;
   background-color: #ffffff;
   height: 1000px; /* only for demonstration, should be removed */
   }
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 28px;
+    }
   </style>
 </head>
 <body>
@@ -36,10 +45,10 @@
     <text fill="#333333" font-size="24" font-family="Verdana" font-weight="bold" x="50%" y="50%" text-anchor="middle" dominant-baseline="middle">유튜브 홍보🎞</text>
     Sorry, your browser does not support inline SVG.
   </svg>  
-  
+    
   <div class="menu-wrapper">
-  <ul class="menu">
-    <li><a class="active" href="https://jisoo53.github.io/testweb/">Home</a></li>
+    <ul class="menu">  
+    <li><a class="active" href="https://jisoo53.github.io/testweb">Home</a></li>
     <li><a href="./offline.html">오프라인 활동</a></li>
     <li><a href="./instagram.html">인스타그램 홍보</a></li>
     <li><a href="./youtube.html">유튜브 홍보</a></li>
@@ -51,16 +60,8 @@
       </div>
     </li>
   </ul>
-</div>
+  </div>
 
-  <style>
-    h1 {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 28px;
-    }
-  </style>
-  
   <article>
     <h1 style="text-align: center; margin-top: 50px; font-size: 28px;">오페라 관련 숏폼 영상</h1>
     <div class="video-container">
@@ -78,7 +79,7 @@
       </div>
     </div>
   </article>
-  
+
   <style>
     .video-container {
       display: flex;
@@ -99,5 +100,7 @@
       text-align: center;
     }
   </style>
+
+  
 </body>
 </html>

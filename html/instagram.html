@@ -17,11 +17,44 @@
   float: left;
   padding: 20px;
   box-sizing:border-box; 
+         /* 박스모델에서 박스의 크기는 기본적으로 콘텐츠의 크기만 계산(box-sizing:content-box;)
+         아래에서 넓이를 70%로 지정했는데 패딩의 크기가 20px이 있어 실제 크기는 70%를 초과하게 됨
+         box-sizing을 border-box 로 지정하면 **박스 크기 = 콘텐츠 크기+padding크기+border크기의 합**
+         패딩의 크기를 포함한 article 영역의 전체 넓이를 70%로 맞추기 위해 border-box로 지정함 */
   width: 100%;
   background-color: #ffffff;
   height: 800px; /* only for demonstration, should be removed */
   }
   </style>
+
+    <style>
+      h1 {
+          text-align: center;
+          margin-top: 50px;
+          font-size: 28px;
+      }
+      
+      .thumbnail-container {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 20px;
+      }
+      
+      .thumbnail {
+          width: 30%;
+          margin-bottom: 20px;
+          text-align: center;
+      }
+      
+      .thumbnail img {
+          width: 100%;
+      }
+      
+      .thumbnail p {
+          text-align: center;
+      }
+  </style>
+  
 </head>
 <body>
   <svg height="120" width="100%">
@@ -35,22 +68,23 @@
     <text fill="#333333" font-size="24" font-family="Verdana" font-weight="bold" x="50%" y="50%" text-anchor="middle" dominant-baseline="middle">인스타그램 홍보📱</text>
     Sorry, your browser does not support inline SVG.
   </svg>
+
     
   <div class="menu-wrapper">
-  <ul class="menu">
-    <li><a class="active" href="https://newdelee.github.io/23webproject">Home</a></li>
-    <li><a href="./offline.html">오프라인 활동</a></li>
-    <li><a href="./instagram.html">인스타그램 홍보</a></li>
-    <li><a href="./youtube.html">유튜브 홍보</a></li>
-    <li class="dropdown">
-      <a href="#" class="dropbtn">온라인 홍보관</a>
-      <div class="dropdown-content" >
-        <a href="https://instagram.com/mozzzi_soo?igshid=NGExMmI2YTkyZg==">인스타그램</a>
-        <a href="https://www.youtube.com/channel/UCxrz887tYB3QMs16_xYTC7g">유튜브</a>
-      </div>
+    <ul class="menu">
+      <li><a class="active" href="https://jisoo53.github.io/testweb/">Home</a></li>
+      <li><a href="./offline.html">오프라인 활동</a></li>
+      <li><a href="./instagram.html">인스타그램 홍보</a></li>
+      <li><a href="./youtube.html">유튜브 홍보</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">온라인 홍보관</a>
+        <div class="dropdown-content" >
+          <a href="https://instagram.com/mozzzi_soo?igshid=NGExMmI2YTkyZg==">인스타그램</a>
+          <a href="https://www.youtube.com/channel/UCxrz887tYB3QMs16_xYTC7g">유튜브</a>
+        </div>  
     </li>
   </ul>
-</div>
+  </div>
 
   <article>
     <h1>여왕 3부작 줄거리 인스타툰</h1>
@@ -67,9 +101,10 @@
             <img src="../image/roberto.jpg" alt="Image 3">
             <p><로베르토 데브뢰> 줄거리</p>
         </div>
-      </article>
+    </div>
+  </article>
 
-    <article>
+  <article>
       <h1><로베르토 데브뢰> 빅딜이벤트</h1>
       <div class="thumbnail-container">
           <div class="thumbnail">
@@ -84,7 +119,8 @@
               <img src="../image/ganda.jpg" alt="Image 3">
               <p>빅딜이벤트 인스타툰</p>
           </div>
-        </article>
+      </div>
+    </article>
 
     <article>
       <h1><로베르토 데브뢰> 홍보</h1>
@@ -94,42 +130,15 @@
                <p>추리게임 버전</p>
           </div>
            <div class="thumbnail">
-              <img src="../image/who.jpg" alt="Image 2">
+              <img src="../image/link.jpg" alt="Image 2">
               <p>추리게임 안내</p>
           </div>
            <div class="thumbnail">
                <img src="../image/book.jpg" alt="Image 3">
               <p>대사 속 인물 소개</p>
           </div>
-      </article>
+      </div>
+    </article>
 
-<style>
-    h1 {
-        text-align: center;
-        margin-top: 50px;
-        font-size: 28px;
-    }
-    
-    .thumbnail-container {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-    }
-    
-    .thumbnail {
-        width: 30%;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    
-    .thumbnail img {
-        width: 100%;
-    }
-    
-    .thumbnail p {
-        text-align: center;
-    }
-</style> 
-  
 </body>
 </html>
